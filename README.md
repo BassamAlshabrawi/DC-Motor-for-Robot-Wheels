@@ -12,12 +12,12 @@ DC motor can be rotating either clockwise or anti-clockwise depending on the app
 
 ## L293D
 L293D H-bridge is the driver that used to control two DC Motors, either the speed or the direc  that has 16 pins distributed as:
-•	4 pins for input from the arduino, 2 of these for one DC motor and 2 for another DC motor.
-•	4 pins for output to the DC motor, 2 of these for one DC motor and 2 for another DC motor.
-•	2 pins for enable and disable for 2 DC Motor respectively.
-•	Pin for 5V supply voltage that connected to the 5V of arduino.
-•	Pin for supply voltage that connected to the 9V Battery.
-•	4 pins for ground.
+*	4 pins for input from the arduino, 2 of these for one DC motor and 2 for another DC motor.
+*	4 pins for output to the DC motor, 2 of these for one DC motor and 2 for another DC motor.
+*	2 pins for enable and disable for 2 DC Motor respectively.
+*	Pin for 5V supply voltage that connected to the 5V of arduino.
+*	Pin for supply voltage that connected to the 9V Battery.
+*	4 pins for ground.
 
 Using TinkerCAD website, theses pins connected with arduino and battery as it shown here (https://www.tinkercad.com/things/eMLA91PguFE-dc-motor-for-robot-wheels/editel)
 In this project we have used it to control both speed and direction by changing the value of the resistance of potentiometer .

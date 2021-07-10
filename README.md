@@ -22,6 +22,12 @@ L293D H-bridge is the driver that used to control two DC Motors, either the spee
 Using TinkerCAD website, theses pins connected with arduino and battery as it shown here (https://www.tinkercad.com/things/eMLA91PguFE-dc-motor-for-robot-wheels/editel)
 In this project we have used it to control both speed and direction by changing the value of the resistance of potentiometer .
 
+
+## Potentiometer
+The potentiomener can change the resistance by rotating it from 0 to 180 degrees to obtain different values of it.
+
+In this project, we have programmed the potentiometer to change the direction by changing the angle of the potentiometer rotating, whereas from 0-80 degrees in a certain direction and from 90-180 in the opposite direction.
+
 ## Battery
 To choose the suitable battery, we should know two important values, which are voltage and current.
 The battery voltage can be determined by take the highest voltage that included in the circuit, so the voltage of the battery is 9V
@@ -68,6 +74,8 @@ digitalWrite(EnableA,HIGH);
 digitalWrite(EnableB,HIGH);
 
 s=analogRead(A0);
+
+s= map(s,0,1023,0,180);
  
 
 if (s>=512){

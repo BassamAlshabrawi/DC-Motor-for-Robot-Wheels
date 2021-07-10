@@ -4,11 +4,11 @@ In order converting the electrical energy to mechanical energy, the electric mot
 DC motor can be rotating either clockwise or anti-clockwise depending on the application of it .Therefore, it needs to be controlled, and in our project, we have used L293D H-bride driver that connected with arduino UNO kit to achieve that, using TinkerCAD simulation website.
 
 ## Components
-•	Arduino UNO
-•	x2 DC Motor
-•	9V Battery
-•	Potentiometer
-•	L293D driver
+*	Arduino UNO
+*	x2 DC Motor
+*	9V Battery
+*	Potentiometer
+*	L293D driver
 
 ## L293D
 L293D H-bridge is the driver that used to control two DC Motors, either the speed or the direc  that has 16 pins distributed as:
@@ -28,42 +28,71 @@ The battery voltage can be determined by take the highest voltage that included 
 As for the current , we cannot determined and the reason referred to the value of torque which is unknown, because the value of torque depends on the load, and we don’t have it.     
 ## Arduino Code
 int Mot1Plus=3;
+
 int Mot1Minus=6;
+
 int Mot2Plus=9;
+
 int Mot2Minus=11;
+
 int EnableA=5;
+
 int EnableB=10;
+
 int s;
 
 void setup() {
- pinMode(Mot1Plus,OUTPUT);
- pinMode(Mot1Minus,OUTPUT);
- pinMode(Mot2Plus,OUTPUT);
- pinMode(Mot2Minus,OUTPUT);
- pinMode(EnableA,OUTPUT);
- pinMode(EnableB,OUTPUT);
- Serial.begin(9600);
+
+pinMode(Mot1Plus,OUTPUT);
+
+pinMode(Mot1Minus,OUTPUT);
+
+pinMode(Mot2Plus,OUTPUT);
+
+pinMode(Mot2Minus,OUTPUT);
+
+pinMode(EnableA,OUTPUT);
+
+pinMode(EnableB,OUTPUT);
+
+Serial.begin(9600);
 
 
 }
 
+
 void loop() {
-  digitalWrite(EnableA,HIGH);
-  digitalWrite(EnableB,HIGH);
-  s=analogRead(A0);
+
+digitalWrite(EnableA,HIGH);
+
+digitalWrite(EnableB,HIGH);
+
+s=analogRead(A0);
  
-  if (s>=512){
-  digitalWrite(Mot1Plus,LOW);
-  analogWrite(Mot1Minus,s);
-  digitalWrite(Mot2Plus,LOW);
-  analogWrite(Mot2Minus,s);
+
+if (s>=512){
+
+digitalWrite(Mot1Plus,LOW);
+
+analogWrite(Mot1Minus,s);
+
+digitalWrite(Mot2Plus,LOW);
+
+analogWrite(Mot2Minus,s);
+  
   Serial.println(s);
   }
+  
   else if (s<512){
+  
   digitalWrite(Mot1Plus,s);
+  
   analogWrite(Mot1Minus,LOW);
+  
   digitalWrite(Mot2Plus,s);
+  
   analogWrite(Mot2Minus,LOW);
+  
   Serial.println(s);
 
 }

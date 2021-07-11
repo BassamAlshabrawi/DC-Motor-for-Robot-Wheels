@@ -33,7 +33,7 @@ To choose the suitable battery, we should know two important values, which are v
 The battery voltage can be determined by take the highest voltage that included in the circuit, so the voltage of the battery is 9V
 As for the current , we cannot determined and the reason referred to the value of torque which is unknown, because the value of torque depends on the load, and we don’t have it.
 
-to build the charging circuit, we need to regulate the voltage to obtain the voltage of battery which is 9V.Unfortunatly, TinkerCAD can not do it,so we use the proteus to build and sketch the charging circuit which is in the fingure
+to build the charging circuit, we need to regulate the voltage to obtain the voltage of battery which is 9V.Unfortunatly, TinkerCAD can not do it,so we use the proteus to build and sketch the charging circuit which is in the figure below.
 
 ![Charging Circuit](https://user-images.githubusercontent.com/85504873/125182513-4aae6380-e217-11eb-9a51-e11aef9c0d62.png)
 

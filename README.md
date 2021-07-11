@@ -1,4 +1,4 @@
-# Control the spped and direction of DC Motors for Robot Wheels
+# Control the speed and direction of DC Motors for Robot Wheels
 ## Introduction 
 In order converting the electrical energy to mechanical energy, the electric motor is used. In general, the electric motor has many types and one of these types is DC Motor.
 DC motor can be rotating either clockwise or anti-clockwise depending on the application of it .Therefore, it needs to be controlled, and in our project, we have used L293D H-bride driver that connected with arduino UNO kit to achieve that, using TinkerCAD simulation website.

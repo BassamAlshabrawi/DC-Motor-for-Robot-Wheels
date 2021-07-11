@@ -19,7 +19,7 @@ L293D H-bridge is the driver that used to control two DC Motors, either the spee
 *	Pin for supply voltage that connected to the 9V Battery.
 *	4 pins for ground.
 
-Using TinkerCAD website, theses pins connected with arduino and battery as it shown here (https://www.tinkercad.com/things/eMLA91PguFE-dc-motor-for-robot-wheels/editel)
+Using TinkerCAD website, theses pins connected with arduino and battery as it shown here (https://www.tinkercad.com/things/casz2j6Ab39-dc-motor-for-robot-wheels/editel?sharecode=k1CGM_ThQLhuhdifkM5HanJFd893DK1eluPevG1Kma8)
 In this project we have used it to control both speed and direction by changing the value of the resistance of potentiometer .
 
 
@@ -55,7 +55,11 @@ int EnableA=5;
 
 int EnableB=10;
 
-int s;
+int s1;
+
+int s2;
+
+
 
 void setup() {
 
@@ -74,7 +78,11 @@ pinMode(EnableB,OUTPUT);
 Serial.begin(9600);
 
 
+
+
+
 }
+
 
 
 void loop() {
@@ -83,37 +91,73 @@ digitalWrite(EnableA,HIGH);
 
 digitalWrite(EnableB,HIGH);
 
-s=analogRead(A0);
+s1=analogRead(A0);
 
-s= map(s,0,1023,0,180);
- 
+s1= map(s1,0,1023,0,180);
 
-if (s>=512){
+if (s2>0){
 
 digitalWrite(Mot1Plus,LOW);
 
-analogWrite(Mot1Minus,s);
+analogWrite(Mot1Minus,LOW);
 
 digitalWrite(Mot2Plus,LOW);
 
-analogWrite(Mot2Minus,s);
-  
-  Serial.println(s);
-  }
-  
-  else if (s<512){
-  
-  digitalWrite(Mot1Plus,s);
-  
-  analogWrite(Mot1Minus,LOW);
-  
-  digitalWrite(Mot2Plus,s);
-  
-  analogWrite(Mot2Minus,LOW);
-  
-  Serial.println(s);
+analogWrite(Mot2Minus,LOW);
+
+Serial.println(s1);
 
 }
+
+else {
+
+digitalWrite(Mot1Plus,LOW);
+
+analogWrite(Mot1Minus,s1);
+
+digitalWrite(Mot2Plus,LOW);
+
+analogWrite(Mot2Minus,s1);
+
+Serial.println(s1);
+
+}
+
+
+
+s2=analogRead(A1);
+
+s2= map(s2,0,1023,0,180);
+
+if (s1>0){
+
+digitalWrite(Mot1Plus,LOW);
+
+analogWrite(Mot1Minus,LOW);
+
+digitalWrite(Mot2Plus,LOW);
+
+analogWrite(Mot2Minus,LOW);
+
+Serial.println(s2);
+
+}
+
+else {
+
+digitalWrite(Mot1Plus,s2);
+
+analogWrite(Mot1Minus,LOW);
+
+digitalWrite(Mot2Plus,s2);
+
+analogWrite(Mot2Minus,LOW);
+
+Serial.println(s2);
+
+}
+
+
 
 
 }

@@ -7,7 +7,7 @@ DC motor can be rotating either clockwise or anti-clockwise depending on the app
 *	Arduino UNO
 *	x2 DC Motor
 *	9V Battery with Charging
-*	Potentiometer
+* x2 Potentiometer
 *	L293D driver
 
 ## L293D
@@ -26,7 +26,12 @@ In this project we have used it to control both speed and direction by changing 
 ## Potentiometer
 The potentiomener can change the resistance by rotating it from 0 to 180 degrees to obtain different values of it.
 
-In this project, we have programmed the potentiometer to change the direction by changing the angle of the potentiometer rotating, whereas from 0-80 degrees in a certain direction and from 90-180 in the opposite direction.
+In this project, we have used 2 potentiometers to control the direction and speed of 2 DC motors.
+
+for the speed , when the value of the resistance of the potentiometer increases, the speed will increase , and when the value of the resistance of the potentiometer decreases, the speed will decrease.
+
+for the direction, we have 2 potentiometers, so we have programmed them to make the motors rotating both direction, whears one of the potentiometers makes the motors rotating clockwise , and the other makes the motors rotating anti-clockwise.
+
 
 ## Battery
 To choose the suitable battery, we should know two important values, which are voltage and current.

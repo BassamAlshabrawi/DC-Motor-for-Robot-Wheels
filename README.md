@@ -11,7 +11,7 @@ DC motor can be rotating either clockwise or anti-clockwise depending on the app
 *	L293D driver
 
 ## L293D
-L293D H-bridge is the driver that used to control two DC Motors, either the speed or the direc  that has 16 pins distributed as:
+L293D H-bridge is the driver that used to control two DC Motors, either the speed or the direction, that has 16 pins distributed as:
 *	4 pins for input from the arduino, 2 of these for one DC motor and 2 for another DC motor.
 *	4 pins for output to the DC motor, 2 of these for one DC motor and 2 for another DC motor.
 *	2 pins for enable and disable for 2 DC Motor respectively.
